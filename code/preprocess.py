@@ -51,7 +51,7 @@ def read_data(filename, sparsify=False, skip_exprs=False):
 
 
 def read_real_old(filename, batch = True):
-    data_path = "./data/real/" + filename + "/data.h5"
+    data_path = "../data/real_data/" + filename + "/data.h5"
     mat, obs, var, uns = read_data(data_path, sparsify=False, skip_exprs=False)
     if isinstance(mat, np.ndarray):
         X = np.array(mat)
@@ -68,7 +68,7 @@ def read_real_old(filename, batch = True):
 
 
 def read_real(filename, batch=True):
-    data_path = "../scrna/data/" + filename + "/data.h5"
+    data_path = "../data/real_data/" + filename + "/data.h5"
     mat, obs, var, uns = read_data(data_path, sparsify=False, skip_exprs=False)
     if isinstance(mat, np.ndarray):
         X = np.array(mat)
@@ -88,7 +88,7 @@ def read_real(filename, batch=True):
 
 
 def read_real_with_genes(filename, batch=True):
-    data_path = "../scrna/data/" + filename + "/data.h5"
+    data_path = "../data/real_data/" + filename + "/data.h5"
     mat, obs, var, uns = read_data(data_path, sparsify=False, skip_exprs=False)
     if isinstance(mat, np.ndarray):
         X = np.array(mat)
@@ -150,20 +150,13 @@ def class_splitting_new(filename, source_name, target_name):
         if source_name == "Shekhar" and target_name == "Macosko":
             seen_classes = ['Muller cell', 'amacrine cell', 'retinal bipolar neuron', 'retinal rod cell']
             novel_classes = ['blood vessel endothelial cell', 'retina horizontal cell', 'retinal cone cell', 'retinal ganglion cell']
-            # seen_classes = ['Muller cell', 'amacrine cell', 'retinal bipolar neuron']
-            # novel_classes = ['blood vessel endothelial cell', 'retina horizontal cell', 'retinal cone cell',
-            #                  'retinal ganglion cell', 'retinal rod cell']
     if filename == "ALIGNED_Mus_musculus_Small_Intestine":
         if source_name == "Haber_10x" and target_name == "Haber_Smart-seq2":
             seen_classes = ['brush cell', 'enterocyte of epithelium of small intestine']
             novel_classes = ['small intestine goblet cell', 'stem cell']
-            # seen_classes = ['brush cell', 'enteroendocrine cell', 'paneth cell']
-            # novel_classes = ['enterocyte of epithelium of small intestine', 'small intestine goblet cell', 'stem cell']
         if source_name == "Haber_Smart-seq2" and target_name == "Haber_10x":
             seen_classes = ['brush cell', 'enterocyte of epithelium of small intestine', 'enteroendocrine cell']
             novel_classes = ['paneth cell', 'small intestine goblet cell', 'stem cell']
-            # seen_classes = ['brush cell', 'enteroendocrine cell', 'paneth cell']
-            # novel_classes = ['enterocyte of epithelium of small intestine', 'small intestine goblet cell', 'stem cell']
         if source_name == "Haber_10x_largecell" and target_name == "Haber_10x_region":
             seen_classes = ['brush cell', 'enterocyte of epithelium of small intestine', 'enteroendocrine cell']
             novel_classes = ['paneth cell', 'small intestine goblet cell', 'stem cell']
