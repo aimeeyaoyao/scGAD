@@ -36,11 +36,11 @@ python train_cross.py
 
 Then you will get the seen accuracy 98.8, novel accuracy 80.5 and overall accuracy 92.4. Besides, you can also use the Vento-Tormo Smart-seq2 as reference data and the Vento-Tormo 10x as target data. For it, you just need to set the "num" parameter as 5. 
 
-For single data example, we use the Chen dataset as an example and you can download the data from <a href="https://cblast.gao-lab.org/Chen/Chen.h5">Chen</a>. Then you put the data file into the "data/real_data/Chen" folder. We set the labeled ratio as 0.5 defaultly and you can modify it by changing the "ratio" parameter. You just need to focus on the train_single.py file. And you can run the following code in your command lines:
+For single data example, we use the Cao dataset as an example and you can download the data from <a href="https://cblast.gao-lab.org/Cao/Cao.h5">Cao</a>. Then you put the data file into the "data/real_data/Cao" folder. We set the labeled ratio as 0.5 defaultly and you can modify it by changing the "ratio" parameter. You just need to focus on the train_single.py file. And you can run the following code in your command lines:
 
 python train_single.py
 
-Then you will get the seen accuracy 98.3, novel accuracy 93.0 and overall accuracy 94.1. For other case studies, you can input different parameters to achieve them.
+Then you will get the seen accuracy 92.4, novel accuracy 81.0 and overall accuracy 78.1. For other case studies, you can input different parameters to achieve them.
 
 # Reference
 Our paper is submitted to Briefings in Bioinformatics and the specific details will come soon. Please consider citing it.
