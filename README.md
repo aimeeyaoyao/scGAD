@@ -43,6 +43,6 @@ python train_single.py
 Then you will get the seen accuracy 92.4, novel accuracy 81.0 and overall accuracy 78.1. For other case studies, you can input different parameters to achieve them.
 
 # Reference
-Our paper is submitted to Briefings in Bioinformatics and the specific details will come soon. Please consider citing it.
+Our paper is accepted by Briefings in Bioinformatics and the specific details will come soon. Please consider citing it.
 # Contributing
 Author email: zhaiyuyao@stu.pku.edu.cn. If you have any questions, please contact with me. 
